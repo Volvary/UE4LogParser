@@ -1,0 +1,6 @@
+﻿  UE4LogParser.cpp
+c:\users\stratos\desktop\ue4logparser\ue4logparser\ue4logparser.cpp(171): warning C4018: '>': signed/unsigned mismatch
+  Generating code
+  All 345 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  UE4LogParser.vcxproj -> C:\Users\Stratos\Desktop\UE4LogParser\Release\UE4LogParser.exe

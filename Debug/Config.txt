@@ -1,0 +1,52 @@
+//*Starting lines with // will make the Parser read that line as a comment.*
+//Lines containing only whitespaces or nothing are ignored.
+
+//A line with information will be read as an Ignore, making it skip the line.
+
+//A line starting with a ! will be read as a Bypass, 
+//	forcing the parser to show the line if one of the bypass is found in the line.
+
+//A line with a $ as the first character will override the bypasses and hide the line again if
+//	an override is found in the line. This can be used to hide false positives from the bypasses.
+
+//If a * is found as the sole character on a line, the Parser will enter IgnoreAll mode,
+//	only showing everything raised by a Bypass.
+
+//If a line starting with ? is found, the Parser will read the next two numbers on the line and will enter
+//	Back Wrap mode. (syntax example: ? 4 6) 
+//	 - The first number indicates how many lines before a match will be kept in memory and printed.
+//	 - The second number indicates how many lines after a match will be printed.
+//	 - These settings can be used to get more context on issues around entries.
+? 0 0
+
+//This first category ignores categories we don't really play around much.
+LogPluginManager
+LogPakFile
+LogInit
+LogConfig
+LogStreaming
+LogDevObjectVersion
+LogConsoleManager
+LogVulkanRHI
+LogRendererCore
+LogGameFeatures
+LogShaderLibrary
+InstallBundleManager
+
+//This second category ignores more generic lines that can take a lot of space.
+Detected thermal sensor
+PLAYLIST
+InstallBundleSourceBulk
+Requesting Bundle
+Adding Request
+Moving Request
+Mounting pak file
+New Graphics PSO
+
+//These bypasses will make the line show up regardless of if it was previously ignored.
+!Warning
+!Error
+
+//These overrides will silence the errors/warnings raised via the bypasses.
+$Creating unregistered Device Profile CVar
+$Lorem

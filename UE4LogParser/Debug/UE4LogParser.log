@@ -1,0 +1,3 @@
+﻿  UE4LogParser.cpp
+c:\users\stratos\desktop\ue4logparser\ue4logparser\ue4logparser.cpp(171): warning C4018: '>': signed/unsigned mismatch
+  UE4LogParser.vcxproj -> C:\Users\Stratos\Desktop\UE4LogParser\Debug\UE4LogParser.exe
